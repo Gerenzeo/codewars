@@ -9,6 +9,7 @@ from levels.easy.alternating_case import to_alternating_case
         ("124bC=", "124Bc=", does_not_raise()),
         ("abcd", "ABCD", does_not_raise()),
         ("", "", does_not_raise()),
+        (2, "", pytest.raises(TypeError)),
     ]
 )
 def test_to_alternating_case(string, result, expectation):
