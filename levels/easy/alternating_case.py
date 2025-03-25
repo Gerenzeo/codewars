@@ -1,4 +1,4 @@
-def to_alternating_case(string: str):
+def to_alternating_case(string: str) -> str:
     """Converts each letter in the string to the opposite case.
 
     Args:
