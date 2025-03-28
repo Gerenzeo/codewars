@@ -1,13 +1,11 @@
-
 def password(st: str):
-    check_upper = list(zip(map(lambda x: x.isupper(), st)))
+    
+    if not isinstance(st, str):
+        raise TypeError("Should be a str")
 
-    print(check_upper)
+    check_length = len(st) >= 8
+    check_upper = True if True in list(map(lambda c: c.isupper(), st)) else False
+    check_lower = True if True in list(map(lambda c: c.islower(), st)) else False
+    check_numeric = True if True in list(map(lambda c: c.isnumeric(), st)) else False
 
-
-
-if __name__ == "__main__":
-    test_password = "Abcd1234" # True
-
-    result = password(test_password)
-    print(result)
+    return True if check_length and check_upper and check_lower and check_numeric else False
