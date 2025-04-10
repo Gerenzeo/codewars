@@ -15,10 +15,3 @@ def summation(num):
     res = num + summation(num - 1)
     return res
     
-
-
-if __name__ == "__main__":
-
-    number = 4
-    res = summation(number)
-    print(res)
