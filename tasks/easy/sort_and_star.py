@@ -6,9 +6,12 @@
 
 
 def two_sort(array):
-    pass
+    return "***".join(sorted(array)[0])
 
 
 
 if __name__ == "__main__":
     L = ["black", "pink", "yellow", "red", "orange", "blue", "silver"]
+
+    res = two_sort(L)
+    print(res)
